@@ -51,7 +51,7 @@ use App\Http\Controllers\users\AppController;
 use App\Http\Controllers\users\ClockController;
 use App\Http\Controllers\users\leaveController as UserLeaveController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\hrm\employee\GeofenceController;
 /*
 |--------------------------------------------------------------------------
 | Core Application Routes
@@ -758,4 +758,14 @@ Route::middleware('auth:supplier')->prefix('supplier')->name('supplier.')->group
 | Framework Generated Auth Routes (Breeze)
 |--------------------------------------------------------------------------
 */
+
+
+
+///////////////////////// GEOLOCATION /////////////////////////////
+Route::get('/admin/geofence', [GeofenceController::class, 'index'])->name('admin.geofence.index');
+Route::post('/admin/geofence/update', [GeofenceController::class, 'update'])->name('admin.geofence.update');
+
+// Employee Toggle (Update your existing route to accept coordinates)
+Route::post('/employee/attendance/toggle', [AttendanceController::class, 'toggle'])->name('employee.attendance.toggle');
+
 require __DIR__.'/auth.php';
