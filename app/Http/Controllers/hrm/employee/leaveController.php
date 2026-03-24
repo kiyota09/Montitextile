@@ -15,7 +15,7 @@ class LeaveController extends Controller
      */
     public function leave()
     {
-        return Inertia::render('Dashboard/HRM/Employee/leave', [
+        return Inertia::render('Dashboard/HRM/Employee/Leave', [
             // Fetch all requests with user info for the table
             'leave_requests' => LeaveRequest::with('user:id,name,employee_id')
                 ->orderBy('created_at', 'desc')

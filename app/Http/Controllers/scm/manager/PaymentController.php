@@ -44,7 +44,7 @@ class PaymentController extends Controller
                 'status' => $pay->status,
             ]);
 
-        return Inertia::render('Dashboard/SCM/Manager/payment', [
+        return Inertia::render('Dashboard/SCM/Manager/Payment', [
             'pendingInvoices' => $invoices,
             'paymentHistory' => $payments,
             'stats' => [

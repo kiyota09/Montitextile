@@ -132,7 +132,7 @@ class InventoryController extends Controller
             ->filter(fn ($po) => count($po['items']) > 0) // Only send POs that still have pending items
             ->values();
 
-        return Inertia::render('Dashboard/INV/Manager/inventory', [
+        return Inertia::render('Dashboard/INV/Manager/Inventory', [
             'warehouses' => $warehouses,
             'inventoryData' => $inventoryData,
             'masterMaterials' => $masterMaterials,

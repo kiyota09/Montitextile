@@ -86,7 +86,7 @@ class ProductController extends Controller
             'name' => $w->name,
         ])->values()->toArray();
 
-        return Inertia::render('Dashboard/INV/Manager/product', [
+        return Inertia::render('Dashboard/INV/Manager/Product', [
             'products' => $products,
             'masterMaterials' => $masterMaterials,
             'warehouses' => $warehouses,

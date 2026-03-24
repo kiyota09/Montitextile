@@ -9,6 +9,6 @@ class CloseController extends Controller
 {
     public function close()
     {
-        return Inertia::render('Dashboard/SCM/Manager/close');
+        return Inertia::render('Dashboard/SCM/Manager/Close');
     }
 }

@@ -9,6 +9,6 @@ class verificationController extends Controller
 {
     public function verification()
     {
-        return Inertia::render('Dashboard/SCM/Employee/verification');
+        return Inertia::render('Dashboard/SCM/Employee/Verification');
     }
 }

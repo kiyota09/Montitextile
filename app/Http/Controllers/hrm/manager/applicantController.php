@@ -19,7 +19,7 @@ class ApplicantController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Dashboard/HRM/Applicants/application', [
+        return Inertia::render('Dashboard/HRM/Applicants/Application', [
             'applicants' => Applicant::with('interview')
                 ->orderBy('created_at', 'desc')
                 ->get()

@@ -32,7 +32,7 @@ class AttendanceController extends Controller
         $holidays = Holiday::whereBetween('holiday_date', [$startOfMonth, $endOfMonth])
             ->where('status', 'approved')
             ->get()
-            ->map(fn ($h) => [
+            ->map(fn($h) => [
                 'id' => $h->id,
                 'date' => $h->holiday_date,
                 'name' => $h->holiday_name,
@@ -47,7 +47,7 @@ class AttendanceController extends Controller
         $monthlyShifts = EmployeeShift::whereBetween('effective_date', [$startOfMonth, $endOfMonth])
             ->where('status', 'approved')
             ->get()
-            ->map(fn ($shift) => [
+            ->map(fn($shift) => [
                 'user_id' => $shift->user_id,
                 'shift_type' => $shift->shift_type,
                 'effective_date' => Carbon::parse($shift->effective_date)->toDateString(),
@@ -57,7 +57,7 @@ class AttendanceController extends Controller
             ->whereBetween('effective_date', [$startOfMonth, $endOfMonth])
             ->where('status', 'pending')
             ->get()
-            ->map(fn ($shift) => [
+            ->map(fn($shift) => [
                 'id' => $shift->id,
                 'user_id' => $shift->user_id,
                 'shift_type' => $shift->shift_type,
@@ -68,7 +68,7 @@ class AttendanceController extends Controller
                 'user' => $shift->user ? ['id' => $shift->user->id, 'name' => $shift->user->name] : null,
             ]);
 
-        return Inertia::render('Dashboard/HRM/Employee/attendance', [
+        return Inertia::render('Dashboard/HRM/Employee/Attendance', [
             'employee_attendance' => User::with(['latestAttendance' => function ($query) use ($today) {
                 $query->where('date', $today);
             }, 'currentShift' => function ($query) use ($today) {

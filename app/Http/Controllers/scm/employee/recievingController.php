@@ -9,6 +9,6 @@ class RecievingController extends Controller
 {
     public function recieving()
     {
-        return Inertia::render('Dashboard/SCM/Employee/recieving');
+        return Inertia::render('Dashboard/SCM/Employee/Recieving');
     }
 }

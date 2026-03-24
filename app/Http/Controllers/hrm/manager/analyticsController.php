@@ -58,7 +58,7 @@ class AnalyticsController extends Controller
             ];
         });
 
-        return Inertia::render('Dashboard/HRM/Manager/analytics', [
+        return Inertia::render('Dashboard/HRM/Manager/Analytics', [
             'stats' => [
                 'headcount' => $totalActive,
                 'turnoverRate' => $turnoverRate.'%',

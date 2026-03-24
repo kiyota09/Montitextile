@@ -9,6 +9,6 @@ class InboundController extends Controller
 {
     public function inbound()
     {
-        return Inertia::render('Dashboard/SCM/Employee/inbound');
+        return Inertia::render('Dashboard/SCM/Employee/Inbound');
     }
 }

@@ -67,7 +67,7 @@ class MaterialController extends Controller
         // FETCH PROCUREMENT REQUEST HISTORY TO SEND TO VUE
         $materialRequests = MaterialRequest::orderBy('created_at', 'desc')->get();
 
-        return Inertia::render('Dashboard/INV/Manager/material', [
+        return Inertia::render('Dashboard/INV/Manager/Material', [
             'warehouses' => $warehouses,
             'materials' => $materials,
             'materialRequests' => $materialRequests, // Added this payload

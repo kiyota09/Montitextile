@@ -18,7 +18,7 @@ class InterviewController extends Controller
     {
         $today = Carbon::today();
 
-        return Inertia::render('Dashboard/HRM/Employee/interview', [
+        return Inertia::render('Dashboard/HRM/Employee/Interview', [
             // Today's Agenda
             'todays_interviews' => Interview::with('applicant')
                 ->whereDate('scheduled_at', $today)

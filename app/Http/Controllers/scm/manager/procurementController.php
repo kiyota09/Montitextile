@@ -175,7 +175,7 @@ class ProcurementController extends Controller
                 'unpaidInvoices' => $invoices->where('status', 'unpaid')->count(),
             ];
 
-            return Inertia::render('Dashboard/SCM/Manager/procurement', compact(
+            return Inertia::render('Dashboard/SCM/Manager/Procurement', compact(
                 'warehouses', 'materialRequests', 'suppliers', 'rfqs',
                 'purchaseOrders', 'invoices', 'payments', 'stats'
             ));

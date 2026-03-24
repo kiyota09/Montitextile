@@ -9,6 +9,6 @@ class InventoryController extends Controller
 {
     public function inventory()
     {
-        return Inertia::render('Dashboard/SCM/Employee/inventory');
+        return Inertia::render('Dashboard/SCM/Employee/Inventory');
     }
 }

@@ -17,7 +17,7 @@ class hrmstaffpayrollController extends Controller
      */
     public function hrmstaffpayroll()
     {
-        return Inertia::render('Dashboard/HRM/Employee/hrmstaffpayroll', [
+        return Inertia::render('Dashboard/HRM/Employee/HrmStaffpayroll', [
             'payroll_data' => Payroll::latest()->get(),
             'holidays' => Holiday::orderBy('holiday_date', 'asc')->get(),
             'stats' => [

@@ -17,7 +17,7 @@ class TrainingController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
-        return Inertia::render('Dashboard/HRM/Employee/training', [
+        return Inertia::render('Dashboard/HRM/Employee/Training', [
             'trainees' => $trainees,
         ]);
     }

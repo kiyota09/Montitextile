@@ -10,6 +10,6 @@ class PayrollController extends Controller
     public function payroll()
     {
         // FIX: Added 'Dashboard/' to the path to match resources/js/Pages/Dashboard/HRM/Applicants/application.vue
-        return Inertia::render('Dashboard/HRM/Manager/payroll');
+        return Inertia::render('Dashboard/HRM/Manager/Payroll');
     }
 }

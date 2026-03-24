@@ -34,7 +34,7 @@ class OnboardingController extends Controller
                 ];
             });
 
-        return Inertia::render('Dashboard/HRM/Manager/onboarding', [
+        return Inertia::render('Dashboard/HRM/Manager/Onboarding', [
             'applicants' => $applicants,
         ]);
     }
